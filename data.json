@@ -1,0 +1,296 @@
+[
+    {
+        "name": "Lê Minh Việt Anh",
+        "year_of_birth": 2004,
+        "gender": "Nam",
+        "university": "Đại học Bách Khoa Hà Nội",
+        "email": "anh.lmv.bkhn@gmail.com"
+    },
+    {
+        "name": "Phạm Quang Bách",
+        "year_of_birth": 2002,
+        "gender": "Nam",
+        "university": "VinUniversity",
+        "email": "blu11235@gmail.com"
+    },
+    {
+        "name": "Hoàng Bá Bảo",
+        "year_of_birth": 2002,
+        "gender": "Nam",
+        "university": "Đại học Bách Khoa Hà Nội",
+        "email": "bachdtm169@gmail.com"
+    },
+    {
+        "name": "Phạm Minh Cường",
+        "year_of_birth": 2002,
+        "gender": "Nam",
+        "university": "Đại học Công nghệ - Đại học Quốc gia Hà Nội",
+        "email": "20020098@vnu.edu.vn"
+    },
+    {
+        "name": "Trương Văn Độ",
+        "year_of_birth": 2003,
+        "gender": "Nam",
+        "university": "Đại học Công nghệ - Đại học Quốc gia Hà Nội",
+        "email": "truongvando1910@gmail.com"
+    },
+    {
+        "name": "Hoàng Việt Dũng",
+        "year_of_birth": 2001,
+        "gender": "Nam",
+        "university": "ITMO University",
+        "email": "bungnud113@gmail.com"
+    },
+    {
+        "name": "Bùi Hoàng Dũng",
+        "year_of_birth": 2003,
+        "gender": "Nam",
+        "university": "Đại học Bách Khoa Hà Nội",
+        "email": "dung9d32k2@gmail.com"
+    },
+    {
+        "name": "Bùi Trọng Dũng",
+        "year_of_birth": 2003,
+        "gender": "Nam",
+        "university": "Đại học Bách Khoa Hà Nội",
+        "email": "bui123456trongdung@gmail.com"
+    },
+    {
+        "name": "Trần Thùy Dương",
+        "year_of_birth": 2003,
+        "gender": "Nữ",
+        "university": "Đại học Công nghệ - Đại học Quốc gia Hà Nội",
+        "email": "tranthuyduonghy2003@gmail.com"
+    },
+    {
+        "name": "Quách Đăng Giang",
+        "year_of_birth": 2003,
+        "gender": "Nam",
+        "university": "Đại học Công nghệ Thông tin – Đại học Quốc gia TP.HCM",
+        "email": "giang.dangquach@gmail.com"
+    },
+    {
+        "name": "Nguyễn Thanh Hà",
+        "year_of_birth": 2003,
+        "gender": "Nam",
+        "university": "Đại học Bách Khoa Hà Nội",
+        "email": "captainnemot1k60@gmail.com"
+    },
+    {
+        "name": "Nguyễn Thu Hà",
+        "year_of_birth": 2002,
+        "gender": "Nữ",
+        "university": "Đại học Bách Khoa Hà Nội",
+        "email": "nguyenthuhat1k60@gmail.com"
+    },
+    {
+        "name": "Cù Xuân Hải",
+        "year_of_birth": 2001,
+        "gender": "Nam",
+        "university": "ITMO University",
+        "email": "xuanhai2708@gmail.com"
+    },
+    {
+        "name": "Nguyễn Trung Hiếu",
+        "year_of_birth": 2003,
+        "gender": "Nam",
+        "university": "Đại học Bách Khoa Hà Nội",
+        "email": "hieu.nt230603@gmail.com"
+    },
+    {
+        "name": "Đặng Việt Hoàng",
+        "year_of_birth": 2002,
+        "gender": "Nam",
+        "university": "Đại học Bách Khoa Hà Nội",
+        "email": "beetit338@gmail.com"
+    },
+    {
+        "name": "Nguyễn Văn Hùng",
+        "year_of_birth": 2003,
+        "gender": "Nam",
+        "university": "Đại học Bách Khoa Hà Nội",
+        "email": "hungnv.itb@gmail.com"
+    },
+    {
+        "name": "Nguyễn Quốc Hưng",
+        "year_of_birth": 2002,
+        "gender": "Nam",
+        "university": "Đại học Bách Khoa Hà Nội",
+        "email": "nothung209@gmail.com"
+    },
+    {
+        "name": "Lê Minh Hương",
+        "year_of_birth": 2003,
+        "gender": "Nữ",
+        "university": "Đại học Công nghệ - Đại học Quốc gia Hà Nội",
+        "email": "lmhuong711@gmail.com"
+    },
+    {
+        "name": "Ngô Đăng Huy",
+        "year_of_birth": 2000,
+        "gender": "Nam",
+        "university": "Đại học Công nghệ - Đại học Quốc gia Hà Nội",
+        "email": "ngohuy658@gmail.com"
+    },
+    {
+        "name": "Trần Quang Huy",
+        "year_of_birth": 2001,
+        "gender": "Nam",
+        "university": "Học viện Công Nghệ Bưu Chính Viễn Thông",
+        "email": "quanghuy1604nd@gmail.com"
+    },
+    {
+        "name": "Trần Minh Huyền",
+        "year_of_birth": 2004,
+        "gender": "Nữ",
+        "university": "Đại học Bách Khoa Hà Nội",
+        "email": "huyen.cnh70@gmail.com"
+    },
+    {
+        "name": "Nguyễn Đôn Thế Kiệt",
+        "year_of_birth": 2001,
+        "gender": "Nam",
+        "university": "VinUniversity",
+        "email": "viettel.strixthekiet@gmail.com"
+    },
+    {
+        "name": "Lê Hoàng Trường",
+        "year_of_birth": 2001,
+        "gender": "Nam",
+        "university": "ITMO University",
+        "email": "natibatian@gmail.com"
+    },
+    {
+        "name": "Đào Quang Lợi",
+        "year_of_birth": 2003,
+        "gender": "Nam",
+        "university": "Đại học Bách Khoa Hà Nội",
+        "email": "loidao99@gmail.com"
+    },
+    {
+        "name": "Nguyễn Tiến Long",
+        "year_of_birth": 2003,
+        "gender": "Nam",
+        "university": "ITMO University",
+        "email": "tienlong1106@gmail.com"
+    },
+    {
+        "name": "Nguyễn Quang Long",
+        "year_of_birth": 2003,
+        "gender": "Nam",
+        "university": "Đại học Bách Khoa Hà Nội",
+        "email": "long.nq.hust@gmail.com"
+    },
+    {
+        "name": "Nguyễn Thị Ngọc Mai",
+        "year_of_birth": 2002,
+        "gender": "Nữ",
+        "university": "Đại học Công nghệ - Đại học Quốc gia Hà Nội",
+        "email": "maintn124@gmail.com"
+    },
+    {
+        "name": "Đỗ Dương Mạnh",
+        "year_of_birth": 2003,
+        "gender": "Nam",
+        "university": "ITMO University",
+        "email": "domanhitmo@gmail.com"
+    },
+    {
+        "name": "Nguyễn Ngọc Minh",
+        "year_of_birth": 2004,
+        "gender": "Nam",
+        "university": "Học viện Công Nghệ Bưu Chính Viễn Thông",
+        "email": "minh.itptit@gmail.com"
+    },
+    {
+        "name": "Vũ Thế Nam",
+        "year_of_birth": 2000,
+        "gender": "Nam",
+        "university": "Đại học Công nghệ - Đại học Quốc gia Hà Nội",
+        "email": "vuthenam.9.3.4@gmail.com"
+    },
+    {
+        "name": "Ngô Công Bằng",
+        "year_of_birth": 2003,
+        "gender": "Nam",
+        "university": "Học viện Công Nghệ Bưu Chính Viễn Thông",
+        "email": "ngocongbang.ptit@gmail.com"
+    },
+    {
+        "name": "Nguyễn Huy Thái",
+        "year_of_birth": 2001,
+        "gender": "Nam",
+        "university": "Đại học Công nghệ - Đại học Quốc gia Hà Nội",
+        "email": "nguyenhuythai15@gmail.com"
+    },
+    {
+        "name": "Phan Khôi Nguyên",
+        "year_of_birth": 2002,
+        "gender": "Nam",
+        "university": "Học viện Công Nghệ Bưu Chính Viễn Thông",
+        "email": "khoinguyen6103@gmail.com"
+    },
+    {
+        "name": "Đinh Việt Quang",
+        "year_of_birth": 2002,
+        "gender": "Nam",
+        "university": "Đại học Bách Khoa Hà Nội",
+        "email": "vietquang16012003@gmail.com"
+    },
+    {
+        "name": "Nguyễn Chí Thành",
+        "year_of_birth": 2003,
+        "gender": "Nam",
+        "university": "Đại học Bách Khoa Hà Nội",
+        "email": "caitendenhonhat@gmail.com"
+    },
+    {
+        "name": "Nguyễn Đình Tiến",
+        "year_of_birth": 2004,
+        "gender": "Nam",
+        "university": "Đại học Bách Khoa Hà Nội",
+        "email": "tiennguyen14122003@gmail.com"
+    },
+    {
+        "name": "Đỗ Thu Trang",
+        "year_of_birth": 2000,
+        "gender": "Nữ",
+        "university": "Đại học Công nghệ - Đại học Quốc gia Hà Nội",
+        "email": "thutrang25062k4@gmail.com"
+    },
+    {
+        "name": "Nguyễn Thị Mỹ Tú",
+        "year_of_birth": 2001,
+        "gender": "Nữ",
+        "university": "ITMO University",
+        "email": "jasmine150720@gmail.com"
+    },
+    {
+        "name": "Nguyễn Quang Tuấn",
+        "year_of_birth": 2002,
+        "gender": "Nam",
+        "university": "ITMO University",
+        "email": "quangtuanitmo18@gmail.com"
+    },
+    {
+        "name": "Hoàng Minh Tuấn",
+        "year_of_birth": 2003,
+        "gender": "Nam",
+        "university": "Học viện Công Nghệ Bưu Chính Viễn Thông",
+        "email": "tibanh03@gmail.com"
+    },
+    {
+        "name": "Phạm Mạnh Tuấn",
+        "year_of_birth": 2003,
+        "gender": "Nam",
+        "university": "ITMO University",
+        "email": "7upnamk@gmail.com"
+    },
+    {
+        "name": "Bùi Hoàng Vinh",
+        "year_of_birth": 2001,
+        "gender": "Nam",
+        "university": "Học viện Công Nghệ Bưu Chính Viễn Thông",
+        "email": "hoangvinh1577@gmail.com"
+    }
+]
