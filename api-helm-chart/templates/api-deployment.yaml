@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-api
+  labels:
+    app: backend
+    component: backend
+    chart: {{ .Chart.Name }}-{{ .Chart.Version }}
+    release: {{ .Release.Name }}
+spec:
+  replicas: {{ .Values.api.replicaCount }}
+  selector:
+    matchLabels:
+      app: backend
+      component: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+        component: backend
+        release: {{ .Release.Name }}
+    spec:
+      containers:
+        - name: backend
+          image: "{{ .Values.api.image.repository }}"
+          imagePullPolicy: {{ .Values.api.image.pullPolicy }}
+          ports:
+            - containerPort: 80
+          env:
+            - name: MONGODB_HOST
+              value: mongo
+            - name: MONGODB_USER
+              value: {{ .Values.mongodb.username }}
+            - name: MONGODB_PASSWORD
+              value: {{ .Values.mongodb.password }}
+
