@@ -1,18 +1,15 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ .Release.Name }}-api-service
+  name: {{ include "fastapi-app.fullname" . }}
   labels:
-    app: backend
-    component: backend
-    chart: {{ .Chart.Name }}-{{ .Chart.Version }}
-    release: {{ .Release.Name }}
+    {{- include "fastapi-app.labels" . | nindent 4 }}
 spec:
-  type: {{ .Values.api.service.type }}
-  selector:
-    app: backend
-    component: backend
+  type: {{ .Values.service.type }}
   ports:
-    - port: {{ .Values.api.service.port }}
+    - port: {{ .Values.service.port }}
       targetPort: 80
-      nodePort: {{ .Values.api.service.nodePort }}
+      nodePort: {{ .Values.service.nodePort }}
+      protocol: TCP
+  selector:
+    {{- include "fastapi-app.selectorLabels" . | nindent 4 }}
