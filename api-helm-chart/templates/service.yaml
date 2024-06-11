@@ -1,11 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ .Release.Name }}-api
+  name: {{ include "my-fastapi-app.fullname" . }}
 spec:
-  type: {{ .Values.service.type }}
+  type: NodePort
   ports:
     - port: {{ .Values.service.port }}
       targetPort: 80
+      nodePort: {{ .Values.service.nodePort }} # Default to 30001 if not specified
   selector:
-    app: {{ .Release.Name }}-api
+    app: {{ include "my-fastapi-app.name" . }}
+
