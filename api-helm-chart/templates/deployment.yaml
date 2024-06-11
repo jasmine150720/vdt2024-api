@@ -1,36 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "backend.fullname" . }}
-  labels:
-    app: {{ include "backend.name" . }}
-    component: backend
+  name: {{ .Release.Name }}-api
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      component: backend
+      app: {{ .Release.Name }}-api
   template:
     metadata:
       labels:
-        app: {{ include "backend.name" . }}
-        component: backend
+        app: {{ .Release.Name }}-api
     spec:
       containers:
-        - name: backend
-          image: "{{ .Values.image.repository }}"
+        - name: api
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           ports:
-            - containerPort: 80
+            - containerPort: {{ .Values.service.port }}
           env:
             - name: MONGODB_HOST
-              value: {{ .Values.env.mongodbHost }}
-            - name: MONGODB_USER
-              valueFrom:
-                secretKeyRef:
-                  name: {{ .Values.env.mongodbUserSecret }}
-                  key: {{ .Values.env.mongodbUserKey }}
-            - name: MONGODB_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: {{ .Values.env.mongodbPasswordSecret }}
-                  key: {{ .Values.env.mongodbPasswordKey }}
+              value: "mongodb"
