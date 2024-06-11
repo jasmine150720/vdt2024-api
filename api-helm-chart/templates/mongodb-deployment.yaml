@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Release.Name }}-mongodb
+  name: mongodb
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: {{ .Release.Name }}-mongodb
+      app: mongodb
   template:
     metadata:
       labels:
-        app: {{ .Release.Name }}-mongodb
+        app: mongodb
     spec:
       containers:
         - name: mongodb
-          image: "{{ .Values.mongodb.image }}"
+          image: {{ .Values.mongodb.image }}
           ports:
             - containerPort: {{ .Values.mongodb.port }}
           env:
             - name: MONGO_INITDB_DATABASE
-              value: "vdt2024"
+              value: {{ .Values.mongodb.database }}
