@@ -1,36 +1,31 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Release.Name }}-api
+  name: {{ include "fastapi-app.fullname" . }}
   labels:
-    app: backend
-    component: backend
-    chart: {{ .Chart.Name }}-{{ .Chart.Version }}
-    release: {{ .Release.Name }}
+    {{- include "fastapi-app.labels" . | nindent 4 }}
 spec:
-  replicas: {{ .Values.api.replicaCount }}
+  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: backend
-      component: backend
+      {{- include "fastapi-app.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       labels:
-        app: backend
-        component: backend
-        release: {{ .Release.Name }}
+        {{- include "fastapi-app.selectorLabels" . | nindent 8 }}
     spec:
       containers:
-        - name: backend
-          image: "{{ .Values.api.image.repository }}"
-          imagePullPolicy: {{ .Values.api.image.pullPolicy }}
+        - name: fastapi-app
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           ports:
-            - containerPort: 80
+            - containerPort: 8000
           env:
-            - name: MONGODB_HOST
-              value: mongo
-            - name: MONGODB_USER
-              value: {{ .Values.mongodb.username }}
-            - name: MONGODB_PASSWORD
-              value: {{ .Values.mongodb.password }}
+            {{- range .Values.env }}
+            - name: {{ .name }}
+              value: {{ .value | quote }}
+            {{- end }}
+        - name: mongo
+          image: "{{ .Values.mongodb.image }}"
+          ports:
+            - containerPort: {{ .Values.mongodb.port }}
 
