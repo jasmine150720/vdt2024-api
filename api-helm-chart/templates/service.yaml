@@ -1,14 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "backend.fullname" . }}-service
-  labels:
-    app: {{ include "backend.name" . }}
-    component: backend
+  name: {{ .Release.Name }}-api
 spec:
-  selector:
-    component: backend
+  type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: {{ .Values.service.port }}
-      nodePort: {{ .Values.service.nodePort }}
+      targetPort: 80
+  selector:
+    app: {{ .Release.Name }}-api
