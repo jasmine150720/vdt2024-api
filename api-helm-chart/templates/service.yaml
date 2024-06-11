@@ -10,5 +10,5 @@ spec:
     component: backend
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: 80
-      protocol: TCP
+      targetPort: {{ .Values.service.port }}
+      nodePort: {{ .Values.service.nodePort }}
