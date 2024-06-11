@@ -1,22 +1,35 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Release.Name }}-api
+  name: {{ include "my-fastapi-app.fullname" . }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ .Release.Name }}-api
+      app: {{ include "my-fastapi-app.name" . }}
   template:
     metadata:
       labels:
-        app: {{ .Release.Name }}-api
+        app: {{ include "my-fastapi-app.name" . }}
     spec:
       containers:
-        - name: api
+        - name: my-fastapi-app
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
-            - containerPort: {{ .Values.service.port }}
+            - containerPort: 80
           env:
             - name: MONGODB_HOST
-              value: "mongodb"
+              value: mongodb
+            - name: MONGO_INITDB_DATABASE
+              value: {{ .Values.mongodb.database }}
+          resources:
+            limits:
+              cpu: {{ .Values.resources.limits.cpu }}
+              memory: {{ .Values.resources.limits.memory }}
+            requests:
+              cpu: {{ .Values.resources.requests.cpu }}
+              memory: {{ .Values.resources.requests.memory }}
+      nodeSelector: {{ .Values.nodeSelector }}
+      tolerations: {{ .Values.tolerations }}
+      affinity: {{ .Values.affinity }}
