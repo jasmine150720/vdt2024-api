@@ -20,4 +20,3 @@ spec:
           env:
             - name: MONGO_INITDB_DATABASE
               value: "vdt2024"
-
