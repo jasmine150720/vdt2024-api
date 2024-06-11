@@ -1,15 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "fastapi-app.fullname" . }}
+  name: {{ include "backend.fullname" . }}-service
   labels:
-    {{- include "fastapi-app.labels" . | nindent 4 }}
+    app: {{ include "backend.name" . }}
+    component: backend
 spec:
-  type: {{ .Values.service.type }}
+  selector:
+    component: backend
   ports:
     - port: {{ .Values.service.port }}
       targetPort: 80
-      nodePort: {{ .Values.service.nodePort }}
       protocol: TCP
-  selector:
-    {{- include "fastapi-app.selectorLabels" . | nindent 4 }}
