@@ -1,35 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Release.Name }}-api
+  name: fast-api-backend
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ .Release.Name }}-api
+      app: fast-api-backend
   template:
     metadata:
       labels:
-        app: {{ .Release.Name }}-api
+        app: fast-api-backend
     spec:
       containers:
-        - name: my-fastapi-app
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
+        - name: fast-api-backend
+          image: {{ .Values.fastapi.image.repository }}:{{ .Values.fastapi.image.tag }}
           ports:
-            - containerPort: 80
-          env:
-            - name: MONGODB_HOST
-              value: mongodb
-            - name: MONGO_INITDB_DATABASE
-              value: {{ .Values.mongodb.database }}
-          resources:
-            limits:
-              cpu: {{ .Values.resources.limits.cpu }}
-              memory: {{ .Values.resources.limits.memory }}
-            requests:
-              cpu: {{ .Values.resources.requests.cpu }}
-              memory: {{ .Values.resources.requests.memory }}
-      nodeSelector: {{ .Values.nodeSelector }}
-      tolerations: {{ .Values.tolerations }}
-      affinity: {{ .Values.affinity }}
+            - containerPort: 3000
