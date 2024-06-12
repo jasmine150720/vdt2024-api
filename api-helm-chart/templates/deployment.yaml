@@ -1,19 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: fast-api-backend
+  name: api
 spec:
-  replicas: {{ .Values.replicaCount }}
+  replicas: {{ .Values.api.replicaCount }}
   selector:
     matchLabels:
-      app: fast-api-backend
+      app: api
   template:
     metadata:
       labels:
-        app: fast-api-backend
+        app: api
     spec:
       containers:
-        - name: fast-api-backend
-          image: {{ .Values.fastapi.image.repository }}:{{ .Values.fastapi.image.tag }}
+        - name: api
+          image: "{{ .Values.api.image.repository }}:{{ .Values.api.image.tag }}"
           ports:
             - containerPort: 80
+          env:
+            - name: MONGODB_HOST
+              value: "{{ .Values.api.mongodb.host }}"
+            - name: MONGODB_PORT
+              value: "{{ .Values.api.mongodb.port }}"
+            - name: MONGODB_DATABASE
+              value: "{{ .Values.api.mongodb.database }}"
