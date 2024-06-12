@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Release.Name }}-aoi
+  name: {{ .Release.Name }}-api
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ include "my-fastapi-app.name" . }}
+      app: {{ .Release.Name }}-api
   template:
     metadata:
       labels:
-        app: {{ include "my-fastapi-app.name" . }}
+        app: {{ .Release.Name }}-api
     spec:
       containers:
         - name: my-fastapi-app
