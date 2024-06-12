@@ -1,26 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: api
+  name: mongodb
 spec:
-  replicas: {{ .Values.api.replicaCount }}
+  replicas: {{ .Values.mongodb.replicaCount }}
   selector:
     matchLabels:
-      app: api
+      app: mongodb
   template:
     metadata:
       labels:
-        app: api
+        app: mongodb
     spec:
       containers:
-        - name: api
-          image: "{{ .Values.api.image.repository }}:{{ .Values.api.image.tag }}"
+        - name: mongodb
+          image: "{{ .Values.mongodb.image.repository }}:{{ .Values.mongodb.image.tag }}"
           ports:
-            - containerPort: 80
-          env:
-            - name: MONGODB_HOST
-              value: "{{ .Values.api.mongodb.host }}"
-            - name: MONGODB_PORT
-              value: "{{ .Values.api.mongodb.port }}"
-            - name: MONGODB_DATABASE
-              value: "{{ .Values.api.mongodb.database }}"
+            - containerPort: 27017
+          volumeMounts:
+            - name: mongo-data
+              mountPath: /data/db
+      volumes:
+        - name: mongo-data
+          emptyDir: {}
