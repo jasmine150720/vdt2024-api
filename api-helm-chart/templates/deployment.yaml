@@ -16,4 +16,4 @@ spec:
         - name: fast-api-backend
           image: {{ .Values.fastapi.image.repository }}:{{ .Values.fastapi.image.tag }}
           ports:
-            - containerPort: 3000
+            - containerPort: 80
